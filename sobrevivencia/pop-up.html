@@ -66,6 +66,7 @@
     let params = new URLSearchParams(window.location.search);
 
     let name = params.get('name');
+    console.log(name)
     let src = params.get('src');
 
     document.getElementById('game-logo').src = "./images/" + src;
