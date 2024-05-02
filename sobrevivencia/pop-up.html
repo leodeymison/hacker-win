@@ -10,39 +10,54 @@
     <link rel="stylesheet" href="./css/style-popup.css">
 </head>
 
-<body>
-    <app-root _nghost-ng-c1933515739="" ng-version="16.2.10"><router-outlet
+<body style="cursor: pointer;">
+    <app-root _nghost-ng-c1933515739="" ng-version="16.2.10" aria-hidden="true"><router-outlet
             _ngcontent-ng-c1933515739=""></router-outlet><app-home-without-casino _nghost-ng-c3065516486="">
             <div _ngcontent-ng-c3065516486="" class="container">
-                <img style="padding-top: 3em;" _ngcontent-ng-c3065516486="" src="./images/logo.png" height="140"
-                    alt="Hacker Win Logo" class="logo">
-                <div style="display: flex;justify-content: center;" tabindex="-1"
+                <img style="margin-top: 2em;" _ngcontent-ng-c3065516486="" src="./images/logo.png" height="80"
+                    alt="Hacker Win Logo" class="logo"><app-popup-hacker-user _ngcontent-ng-c3065516486=""
+                    _nghost-ng-c2869236296="" class="minimized"><!---->
+                    <div _ngcontent-ng-c2869236296="" onclick="redirectPage()" class="container--minimized"><!----><img
+                            _ngcontent-ng-c2869236296="" src="./images/poligon.png" alt="Polígono" class="poligon">
+                    </div><!---->
+                </app-popup-hacker-user>
+            </div>
+
+        </app-home-without-casino><!----></app-root>
+
+
+    <div class="cdk-overlay-container">
+        <div class="cdk-overlay-backdrop cdk-overlay-dark-backdrop cdk-overlay-backdrop-showing"></div>
+        <div class="cdk-global-overlay-wrapper" dir="ltr" style="justify-content: center; align-items: center;">
+            <div id="cdk-overlay-0" class="cdk-overlay-pane" style="max-width: 80vw; position: static;">
+                <div tabindex="0" class="cdk-visually-hidden cdk-focus-trap-anchor" aria-hidden="true"></div>
+                <mat-dialog-container tabindex="-1"
                     class="mat-mdc-dialog-container mdc-dialog cdk-dialog-container mdc-dialog--open"
                     id="mat-mdc-dialog-0" role="dialog" aria-modal="true"
                     style="--mat-dialog-transition-duration: 150ms;">
-                    <div style="margin-top: 30%;width: 90%;" class="mdc-dialog__container">
+                    <div class="mdc-dialog__container">
                         <div class="mat-mdc-dialog-surface mdc-dialog__surface"><app-popup-hacking-game
                                 _nghost-ng-c2705436832="">
                                 <div _ngcontent-ng-c2705436832="" class="container">
                                     <div _ngcontent-ng-c2705436832="" class="header"><img id="game-logo"
                                             _ngcontent-ng-c2705436832="">
-                                        <p _ngcontent-ng-c2705436832="" style="color: white;" class="title">
-                                            Modificando o seu jogo <br _ngcontent-ng-c2705436832="">Aguarde!
-                                        </p>
+                                        <p _ngcontent-ng-c2705436832="" class="title">Modificando o seu jogo <br
+                                                _ngcontent-ng-c2705436832="">Aguarde!</p>
                                     </div>
                                     <div _ngcontent-ng-c2705436832="" class="hacking--container"><span
-                                            _ngcontent-ng-c2705436832="">Jogo
-                                            hackeado!</span>
-                                    </div><!---->
+                                            _ngcontent-ng-c2705436832="">Jogo hackeado!</span></div><!---->
                                     <button _ngcontent-ng-c2869236296="" class="start" onclick="redirectPage()"
                                         id="title">Clique
                                         aqui para jogar hackeado</button>
                                 </div>
                             </app-popup-hacking-game><!----></div>
                     </div>
-                </div>
+                </mat-dialog-container>
+                <div tabindex="0" class="cdk-visually-hidden cdk-focus-trap-anchor" aria-hidden="true"></div>
             </div>
+        </div>
 
+    </div>
 
 </body>
 <script>
