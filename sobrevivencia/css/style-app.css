@@ -2284,3 +2284,36 @@
 .image-game.selected {
   filter: grayscale(0%);
 }
+
+
+.beating-item {
+  animation: beating_item 1s infinite;
+  transition: 0.5s;
+}
+.beating-item2 {
+  animation: beating_item2 1s infinite;
+  transition: 0.5s;
+}
+
+@keyframes beating_item {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes beating_item2 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.01);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
