@@ -38,13 +38,16 @@
                         <div class="mat-mdc-dialog-surface mdc-dialog__surface"><app-popup-hacking-game
                                 _nghost-ng-c2705436832="">
                                 <div _ngcontent-ng-c2705436832="" class="container">
-                                    <div _ngcontent-ng-c2705436832="" class="header"><img src="./images/poligon.png"
+                                    <div _ngcontent-ng-c2705436832="" class="header"><img id="game-logo"
                                             _ngcontent-ng-c2705436832="">
                                         <p _ngcontent-ng-c2705436832="" class="title">Modificando o seu jogo <br
                                                 _ngcontent-ng-c2705436832="">Aguarde!</p>
                                     </div>
                                     <div _ngcontent-ng-c2705436832="" class="hacking--container"><span
                                             _ngcontent-ng-c2705436832="">Jogo hackeado!</span></div><!---->
+                                    <button _ngcontent-ng-c2869236296="" class="start" onclick="redirectPage()"
+                                        id="title">Clique
+                                        aqui para jogar hackeado</button>
                                 </div>
                             </app-popup-hacking-game><!----></div>
                     </div>
@@ -57,12 +60,22 @@
 
 </body>
 <script>
+    const title = document.getElementById("title");
+    title.style.display = "none";
+    let params = new URLSearchParams(window.location.search);
+
+    let name = params.get('name');
+    let src = params.get('src');
+
+    document.getElementById('game-logo').src = "./images/" + src;
+    title.innerHTML = `Clique qui para jogar ${name} hackeado`;
+
     const redirectPage = () => {
-        window.location.href = "./app.html"
+        window.location.href = "https://pingoupix.bet/login"
     }
-    // setTimeout(() => {
-    //     window.location.href = "https://google.com"
-    // }, 7000)
+    setTimeout(() => {
+        title.style.display = "flex";
+    }, 5000)
 </script>
 
 </html>

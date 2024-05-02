@@ -1,0 +1,57 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <title>Hacker Win</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css"></script>
+    <link rel="preconect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/style-index.css">
+</head>
+
+<body>
+    <app-root _nghost-ng-c1933515739="" ng-version="16.2.10"><router-outlet
+            _ngcontent-ng-c1933515739=""></router-outlet><app-home-without-casino _nghost-ng-c3065516486="">
+            <div _ngcontent-ng-c3065516486="" class="container">
+                <p _ngcontent-ng-c3065516486="" class="title">Bem-vindo ao</p><img _ngcontent-ng-c3065516486=""
+                    src="./images//logo.png" height="130" alt="Hacker Win Logo" class="logo"><app-popup-hacker-user
+                    _ngcontent-ng-c3065516486="" _nghost-ng-c2869236296="">
+                    <div _ngcontent-ng-c2869236296="" class="container">
+                        <div _ngcontent-ng-c2869236296="" class="content--wrapper">
+                            <p style="padding-bottom: 10px;" _ngcontent-ng-c2869236296="" class="description">Insira
+                                abaixo o mesmo email que realizou
+                                no ato da compra!</p><input id="email" _ngcontent-ng-c2869236296="" type="email"
+                                placeholder="exemplo@email.com" class="email--login ng-untouched ng-pristine ng-valid">
+                        </div>
+                        <div _ngcontent-ng-c2869236296="" class="card">
+                            <p _ngcontent-ng-c2869236296="" class="title">Antes de Usar</p>
+                            <p _ngcontent-ng-c2869236296="" class="description">Realize o login para estar desbloqueando
+                                ganhos </p>
+                            <div _ngcontent-ng-c2869236296="" class="buttons--container"><button
+                                    _ngcontent-ng-c2869236296="" class="start" onclick="redirectPage()">Realizar
+                                    Login</button></div>
+                        </div><!----><!---->
+                    </div><!----><!---->
+                </app-popup-hacker-user>
+            </div>
+</body>
+<script>
+    function validarEmail(email) {
+        var regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        return regex.test(email);
+    }
+    const redirectPage = () => {
+        const email = document.getElementById('email').value;
+        if (!email || email == '' || !email.trim()) {
+            return alert("E-mail é obrigatório")
+        }
+        if (!validarEmail(email)) {
+            return alert("Formato de E-mail inválido")
+        }
+        window.location.href = "./app.html"
+    }
+</script>
+
+</html>

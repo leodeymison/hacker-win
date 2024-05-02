@@ -169,7 +169,8 @@
         id="mat-mdc-slide-toggle-2-label"></label></div>
   </mat-slide-toggle>`;
 
-  let game = "";
+  let game_name = "";
+  let game_src = "";
 
   const paragraph = (title) => {
     return `<p _ngcontent-ng-c2869236296="">${title}</p>`;
@@ -244,12 +245,16 @@
       image.classList.remove('selected');
     } else {
       image.classList.add('selected');
-      game = image.src;
+      game_name = image.alt;
+      game_src = image.src;
     }
   }
 
   const redirectPage = () => {
-    window.location.href = "./pop-up.html"
+    if (!game_name || game_name == '' || !game_name.trim()) {
+      return alert("Selecione o jogo")
+    }
+    window.location.href = `./pop-up.html?name=${game_name}&src=${game_src.split('/').pop()}`
   }
 
 </script>
